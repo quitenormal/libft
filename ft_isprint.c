@@ -6,14 +6,14 @@
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 05:59:25 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/04 06:00:11 by yjirapin         ###   ########.fr       */
+/*   Updated: 2022/03/04 06:08:51 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int cicada)
+int	ft_isprint(int cicada)
 {
 	if (cicada >= 32 && cicada <= 126)
-    	return (1);
-    else
-    	return (0);
+		return (1);
+	else
+		return (0);
 }
