@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 13:42:16 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/04 06:16:21 by yjirapin         ###   ########.fr       */
+/*   Created: 2022/03/04 06:17:30 by yjirapin          #+#    #+#             */
+/*   Updated: 2022/03/04 06:28:06 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-# include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
-
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int coldplay);
-int	ft_strlen(char *str);
-int	ft_isascii(int chill);
-int	ft_isprint(int cicada);
-int ft_tolower(int mama);
-int ft_toupper(int papa);
-
-#endif
+//a is 97 and z is 122
+int	ft_toupper(int papa)
+{
+	if (papa >= 'a' && papa <= 'z')
+		return (papa - 32);
+	else
+		return (papa);
+}
