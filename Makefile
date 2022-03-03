@@ -20,7 +20,8 @@ clean:
 	@rm $(NAME)
 
 fclean:
-#	@rm libft.a
+	touch libft.a
+	@rm libft.a
 	@rm -f $(NAME)
 
 re: fclean all
