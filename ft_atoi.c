@@ -6,10 +6,9 @@
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 06:54:43 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/04 07:06:45 by yjirapin         ###   ########.fr       */
+/*   Updated: 2022/03/04 07:14:31 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 /*
 ** While the current char in the string is a whitespace ..
