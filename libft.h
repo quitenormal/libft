@@ -6,7 +6,7 @@
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:42:16 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/04 06:16:21 by yjirapin         ###   ########.fr       */
+/*   Updated: 2022/03/04 06:37:55 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int	ft_isascii(int chill);
 int	ft_isprint(int cicada);
 int ft_tolower(int mama);
 int ft_toupper(int papa);
+int	ft_atoi(char *str);
 
 #endif

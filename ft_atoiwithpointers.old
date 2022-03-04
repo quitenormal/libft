@@ -1,0 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoiwithpointers.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/04 06:36:45 by yjirapin          #+#    #+#             */
+/*   Updated: 2022/03/04 06:54:27 by yjirapin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*This atoi uses pointers
+Line 24 is too long.
+Results are fine except for:
+	test 14 - No new line $ at the end of string
+*/
+
+int	ft_atoi(char *str)
+{
+	int	sum;
+	int	sign;
+	int	found;
+
+	sum = 0;
+	sign = 1;
+	stillhere = 1;
+	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\f' || *str == '\r')
+		str++;
+	if (*str == '-')
+		sign = -1;
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str && stillhere)
+	{
+		if (*str >= '0' && *str <= '9')
+			sum = sum * 10 + *str - '0';
+		else
+			stillhere = 0;
+		str++;
+	}
+	return (sign * sum);
+}
