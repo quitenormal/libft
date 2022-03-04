@@ -1,4 +1,5 @@
 NAME = a.out
+
 FLAGS = -Wall -Werror -Wextra
 SRC = main.c
 #Change SRC to include other files outside of the libft library
