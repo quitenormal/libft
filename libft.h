@@ -6,7 +6,7 @@
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:42:16 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/04 13:55:30 by yjirapin         ###   ########.fr       */
+/*   Updated: 2022/03/04 15:11:38 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <stddef.h>
 
+
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isalnum(int coldplay);
@@ -26,6 +27,7 @@ int	ft_isascii(int chill);
 int	ft_isprint(int cicada);
 int ft_tolower(int mama);
 int ft_toupper(int papa);
+int	ft_isspace(int c);
 int	ft_atoi(char *str);
 size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
 size_t	ft_strlcat(char *dest, const char *src, size_t destsize);
