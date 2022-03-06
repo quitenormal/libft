@@ -6,7 +6,7 @@
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 20:31:59 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/06 19:37:01 by yjirapin         ###   ########.fr       */
+/*   Updated: 2022/03/06 19:52:58 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,13 @@ if Return value < 0 then it indicates ptr1 is less than ptr2.
 if Return value > 0 then it indicates ptr2 is less than ptr1.
 if Return value = 0 then it indicates ptr1 is equal to ptr2.
 
-SHOULD I USE these two lines?
+I had to use:
+	const unsigned char	*mystr1;
+	const unsigned char	*mystr2;
+Otherwise I will get:
+	error: assignment discards ‘const’ qualifier from pointer target type
+
+But I didn't have to USE these two lines?
 	//mystr1 = (const unsigned char *)ptr1;
 	//mystr2 = (const unsigned char *)ptr2;
 */
