@@ -6,7 +6,7 @@
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:42:16 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/04 21:45:31 by yjirapin         ###   ########.fr       */
+/*   Updated: 2022/03/06 19:35:10 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ void		*ft_memset(void *pointme, int coolbean, size_t sandworm);
 void		*ft_memcpy(void *dst, const void *src, size_t n);
 void		*ft_memmove(void *to, const void *from, size_t n);
 void		*ft_memchr(const void *str, int c, size_t n);
-
+int			ft_memcmp(const void *ptr1, const void *ptr2, size_t n);
 #endif
