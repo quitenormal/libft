@@ -15,6 +15,11 @@ $(NAME) : $(SRC)
 # Prevent error from file names that equal to the label in the Makefile
 .PHONY: all re clean fclean
 
+#shared library for unit tests
+so:
+	$(CC) -fPIC $(CFLAGS) $(SRC)
+	gcc -shared -o libft.so $(OBJ)
+
 clean:
 	@rm *.o
 	@rm $(NAME)
