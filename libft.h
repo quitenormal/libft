@@ -6,7 +6,7 @@
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:42:16 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/07 00:02:42 by yjirapin         ###   ########.fr       */
+/*   Updated: 2022/03/07 21:01:36 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int			ft_tolower(int mama);
 int			ft_toupper(int papa);
 int			ft_isspace(int c);
 int			ft_atoi(char *str);
+int			ft_strncmp(char *s1, char *s2, unsigned int n);
 size_t		ft_strlcpy(char *dest, const char *src, size_t destsize);
 size_t		ft_strlcat(char *dest, const char *src, size_t destsize);
 void		*ft_memset(void *pointme, int coolbean, size_t sandworm);
@@ -37,4 +38,7 @@ void		*ft_memchr(const void *str, int c, size_t n);
 void		ft_bzero(void *someaddress, size_t n);
 int			ft_memcmp(const void *ptr1, const void *ptr2, size_t n);
 char		*ft_strnstr(const char *str1, const char *str2, size_t n);
+char		*ft_strchr(const char *s, int c);
+char		*ft_strrchr(const char *str, int c);
+
 #endif

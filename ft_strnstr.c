@@ -6,7 +6,7 @@
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 19:40:23 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/06 23:49:46 by yjirapin         ###   ########.fr       */
+/*   Updated: 2022/03/07 20:01:41 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ Otherwise, sausage along with the remaining hotdog is returned.
 Reminder: The &hotdog[i] is the address where the first character match started
 
 NOTE: size_t is long unsigned int so we need i and j to be unsigned int
-Also because of -Werror
-to return hotdog, a const char, we need to return (char*)hotdog.
+Also because of -Werror to return hotdog,
+a const char, we need to return (char*)hotdog.
+
 Otherwise, we get error: return discards ‘const’ qualifier
  from pointer target type
 */

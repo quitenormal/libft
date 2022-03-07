@@ -6,7 +6,7 @@
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 23:56:57 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/07 07:46:38 by yjirapin         ###   ########.fr       */
+/*   Updated: 2022/03/07 19:52:02 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_bzero(void *someaddress, size_t n)
 }
 
 /*
-Main functionf for testing
+Main function for testing
 Observation: Using n = -1, ft_bzero does not give a warning during comilation.
 This is not good because it can result in unpredictable behavior.
 bzero.c gives a warning during compilation [-Wstringop-overflow=]
@@ -42,6 +42,7 @@ that the size exceeds maximum object size 9223372036854775807
 
 #include <stdio.h>
 #include <string.h>
+void		*ft_memcpy(void *to, const void *from, size_t n);
 
 int main(void) {
 
@@ -52,11 +53,15 @@ int main(void) {
 	int* p1;
 	int c2;
 	int* p2;
+	int c3;
+	int* p3;
 
 	c1 = 'A';
 	p1 = &c1;
 	c2 = 'Z';
 	p2 = &c2;
+	c3 = 'X';
+	p3 = &c3;
 
 	if(c1 == c2)
 		printf("Not correct");
@@ -66,5 +71,14 @@ int main(void) {
 
 	if(c1 == c2)
 		printf("correct\n");
+	if(c1 == c3)
+		printf("c1 is equal to c3 : Not correct\n");
+
+	ft_memcpy(p3,p1,1);
+	if(c1 == c3)
+		printf("c1 == c3 : Correct\n");
+	//this last one is weird
+	if(c1 == c2)
+		printf("c1 is equal to c2 : Not correct\n");
 }
 */
