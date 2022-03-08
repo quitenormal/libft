@@ -6,7 +6,7 @@
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 12:21:11 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/08 12:36:27 by yjirapin         ###   ########.fr       */
+/*   Updated: 2022/03/08 16:46:57 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,16 @@ You can use either a character array or a string array to specify zero or more
  the string is split at white-space characters.
  */
 
-static int	count_words(const char *str, char c)
+/* We have a rather private function here called count_dracula which
+takes a string and a character and returns an integer that represents
+the number of times the character is found in the string. It's
+magnificent.
+*/
+
+static int	count_dracula(const char *str, char c)
 {
-	int i;
-	int trigger;
+	int	i;
+	int	trigger;
 
 	i = 0;
 	trigger = 0;
@@ -39,7 +45,14 @@ static int	count_words(const char *str, char c)
 	return (i);
 }
 
-static char	*word_dup(const char *str, int start, int finish)
+/* Here is a very private function that likes to read and enjoys
+time alone. Most people call her "wordle". She will take a string and
+two integers then send you a string. What she is really doing is she
+is returning an excerpt between two points (start and finish)
+in the original string.
+*/
+
+static char	*wordle(const char *str, int start, int finish)
 {
 	char	*word;
 	int		i;
@@ -52,26 +65,38 @@ static char	*word_dup(const char *str, int start, int finish)
 	return (word);
 }
 
-char		**ft_split(char const *s, char c)
+/* How do you like that Norminette?
+ft_split returns a pointer to a string (or an array of string)
+because it can.
+
+i keeps track of characters in the entire string starting from zero.
+j keeps track of individual words in the split (array of string)
+			split[j++] = wordle(str, x, i);
+x starts with -1 but gets changed to i if the first character is not c.
+x is changed to -1 again when it finds a c and an excert is taken.
+*/
+
+char	**ft_split(char const *str, char c)
 {
 	size_t	i;
 	size_t	j;
-	int		index;
+	int		x;
 	char	**split;
 
-	if (!s || !(split = malloc((count_words(s, c) + 1) * sizeof(char *))))
+	split = malloc((count_dracula(str, c) + 1) * sizeof(char *));
+	if (!str || !(split))
 		return (0);
 	i = 0;
 	j = 0;
-	index = -1;
-	while (i <= (size_t)ft_strlen((char *)s))
+	x = -1;
+	while (i <= (size_t)ft_strlen((char *)str))
 	{
-		if (s[i] != c && index < 0)
-			index = i;
-		else if ((s[i] == c || i == (size_t)ft_strlen((char *)s)) && index >= 0)
+		if (str[i] != c && x < 0)
+			x = i;
+		else if ((str[i] == c || i == (size_t)ft_strlen((char *)str)) && x >= 0)
 		{
-			split[j++] = word_dup(s, index, i);
-			index = -1;
+			split[j++] = wordle(str, x, i);
+			x = -1;
 		}
 		i++;
 	}
