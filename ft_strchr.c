@@ -6,7 +6,7 @@
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 01:32:06 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/07 10:22:51 by yjirapin         ###   ########.fr       */
+/*   Updated: 2022/03/11 14:27:02 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,36 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (newstr);
 }
+
+/* Dev notes: Once upon a time, there was a function named ft_strchr.
+It takes a string and a character.
+
+char	*ft_strchr(const char *s, int c)
+{
+	char	*str;
+
+	str = (char *)s;
+
+The internal str is equal to s but not a const.
+As long as each character is not a c.
+The pointer of str moves forward.
+The pointer to the place where C is found (or rather the remainder
+of the string where C is found) is returned.
+If C is never found, then 0 is returned once the pointer
+reaches the end of the string.
+
+	while (*str != c)
+	{
+		if (*str == '\0')
+		{
+			return (0);
+		}
+		str++;
+	}
+	return (str);
+}
+
+*/
 
 /* Main function for testing
 
