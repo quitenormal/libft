@@ -6,7 +6,7 @@
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 20:17:33 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/11 14:35:05 by yjirapin         ###   ########.fr       */
+/*   Updated: 2022/03/11 22:11:00 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 // ft_strrchr function searches within the string pointed to by
 // str for the character c. It returns the pointer to the string
-// or rather the substring
-// that starts with C.
+// or rather the substring that starts with C.
 
 char	*ft_strrchr(const char *str, int c)
 {

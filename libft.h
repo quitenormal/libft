@@ -6,7 +6,7 @@
 /*   By: yjirapin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 13:42:16 by yjirapin          #+#    #+#             */
-/*   Updated: 2022/03/11 14:27:36 by yjirapin         ###   ########.fr       */
+/*   Updated: 2022/03/12 06:54:10 by yjirapin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ void		*ft_memmove(void *to, const void *from, size_t n);
 void		*ft_memchr(const void *str, int c, size_t n);
 void		ft_bzero(void *someaddress, size_t n);
 void		*ft_calloc(size_t count, size_t size);
+void		ft_putstr_fd(char *s, int fd);
+void		ft_putchar_fd(char c, int fd);
+void		ft_putendl_fd(char const *s, int fd);
+void		ft_putnbr_fd(int n, int fd);
 int			ft_memcmp(const void *ptr1, const void *ptr2, size_t n);
 char		*ft_strnstr(const char *str1, const char *str2, size_t n);
 char		*ft_strchr(const char *s, int c);
