@@ -18,9 +18,9 @@ if Return value > 0 then it indicates str2 is less than str1.
 if Return value = 0 then it indicates str1 is equal to str2.
 */
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (n == 0)

@@ -21,14 +21,14 @@
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int coldplay);
-int			ft_strlen(char *str);
+size_t		ft_strlen(const char *s);
 int			ft_isascii(int chill);
 int			ft_isprint(int cicada);
 int			ft_tolower(int mama);
 int			ft_toupper(int papa);
 int			ft_isspace(int c);
-int			ft_atoi(char *str);
-int			ft_strncmp(char *s1, char *s2, unsigned int n);
+int			ft_atoi(const char *str);
+int			ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t		ft_strlcpy(char *dest, const char *src, size_t destsize);
 size_t		ft_strlcat(char *dest, const char *src, size_t destsize);
 void		*ft_memset(void *pointme, int coolbean, size_t sandworm);

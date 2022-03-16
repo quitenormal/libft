@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+#include "libft.h"
 
 // s: The string from which to create the substring.
 // start: The start index of the substring in the
@@ -27,27 +25,42 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 	//handle empty string with if(!str) return (NULL)
 	//str[j] = 0 last character of a string is 0
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+static char	*ft_mystronebyte(void)
 {
-	size_t	i;
-	size_t	j;
 	char	*str;
 
-	str = malloc(sizeof(char) * (len + 1));
+	str = (char *) malloc(sizeof(char));
 	if (!str)
 		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
+	str[0] = '\0';
+	return (str);
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*str;
+	size_t	i;
+	size_t	s_len;
+
+	s_len = ft_strlen(s);
+	if (start >= s_len)
 	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
+		str = ft_mystronebyte();
+		return (str);
+	}
+	if (s_len <= len)
+		str = (char *) malloc(sizeof(char) * (s_len - start + 1));
+	else
+		str = (char *) malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	i = 0;
+	while (i < len && s[i + start] != '\0')
+	{
+		str[i] = s[i + start];
 		i++;
 	}
-	str[j] = 0;
+	str[i] = '\0';
 	return (str);
 }
 
